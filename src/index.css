@@ -1,13 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.4s;
+    width: 100%;
+    z-index: 99;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%), 0 2px 4px -1px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%), 0 2px 4px -1px rgb(0 0 0 / 20%);
+}
+
+.inner-section{
+	position: relative;
+	top:60px;
+}
+
+.home-search-caption{
+	position: absolute;
+	left: 15%;
+	bottom: auto !important;
+	top:30% !important;
+	text-align: left !important;
+}
+.home-search-caption h1{ font-size: 40px; color: #fff; font-family: 'Open Sans', sans-serif !important; font-weight: bold;}
+.home-search-caption h1 span{ font-style: italic; }
+
+.add-on .input-group-btn > .btn {
+  border-left-width:0;
+  border-radius: 0 4px 4px 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* stop the glowing blue shadow */
+.add-on .form-control:focus {
+	 box-shadow:none;
+	 -webkit-box-shadow:none; 
+	 border-color:#cccccc; 
+}
+
+.font-bold{ font-weight: bold; }
+
+
+@media only screen and (max-width: 1199px) {
+	.navbar-toggler{ border-color: #fff !important; }
+	.header a.logo{ margin-bottom: 0 !important; padding: 10px 0 !important; display: block; }
+	.carousel{ top: 70px; }
+	.container.required-cont{ margin-top: 100px !important }
+}
+
+@media only screen and (max-width: 767px) {
+	.home-search-caption h1{ font-size: 20px; }
+	.container.required-cont{ margin-top: 100px !important }
 }
